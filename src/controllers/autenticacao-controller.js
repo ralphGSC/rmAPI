@@ -21,7 +21,7 @@ exports.post = async (req, res, next) => {
             return;
         }    
         
-         // Retornar os exercícios e matrículas DIRF
+         // Retornar os exercícios e matrículas do usuário
          let exercicios = await repository.getExercicios({
             USUARIO: usuario.USUARIO,
             PIS: usuario.PIS,

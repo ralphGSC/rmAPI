@@ -8,7 +8,7 @@ const app = express();
 // Carrega as Rotas
 const indexRoute = require('./routes/index-route');
 const autenticacaoRoute = require('./routes/autenticacao-route');
-const dirfRoute = require('./routes/dirf-route');
+const rendimentoRoute = require('./routes/rendimento-route');
 
 const dbConfig = require('./config');
 const db = require('./services/database-service');
@@ -80,6 +80,6 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRoute);
 app.use('/rm/autenticacao', autenticacaoRoute);
-app.use('/rm/dirf', dirfRoute);
+app.use('/rm/rendimento', rendimentoRoute);
 
 module.exports = app;

@@ -1,6 +1,6 @@
 'use strict';
 
-const repository = require('../repositories/dirf-repository');
+const repository = require('../repositories/rendimento-repository');
 
 exports.get = async(req, res, next) => {
     try {       
