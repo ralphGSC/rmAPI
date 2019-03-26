@@ -15,9 +15,10 @@ exports.post = async (req, res, next) => {
 
         // Verificar se autenticação
         if (!usuario) {
-            res.status(404).send({              
+            res.status(404).send([{
+                COD: 404,              
                 MSN: 'Usuário não existe'
-            });
+            }]);
             return;
         }    
         
@@ -39,10 +40,10 @@ exports.post = async (req, res, next) => {
             EXERCICIOS: exercicios
         });
        
-    } catch (e) {
-        console.log(e);
-        res.status(500).send({           
+    } catch (e) {       
+        res.status(500).send([{           
+            COD: 500,
             MSN: 'Falha ao processar requisição'
-        });
+        }]);
     }
 };

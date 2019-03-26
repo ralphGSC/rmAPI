@@ -9,9 +9,9 @@ exports.get = async(req, res, next) => {
             ano: req.params.ano
            }); 
         res.status(200).send(data);
-    } catch (e) {
-        console.log(e.message);
+    } catch (e) {      
         res.status(500).send([{
+            COD: 500,
             MSN: 'Falha ao processar requisição'
         }]);
     }
